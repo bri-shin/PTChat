@@ -10,8 +10,20 @@ export default class Chat extends React.Component {
   };
 
   componentWillMount(){
-
-
+    this.setState({
+      messages:[
+        {
+          _id: 1,
+          text: "Hello User",
+          createdAt: new Date(),
+          user: {
+            _id: 2,
+            name: 'React Native'
+            // avatar
+          },
+        },
+      ],
+    })
   }
 
   render(){

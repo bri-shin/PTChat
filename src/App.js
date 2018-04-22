@@ -7,7 +7,8 @@ import React, {Component} from 'react';
 //Added by sshin
 import Home from './components/Home';
 import Chat from './components/Chat';
-import {Firebase} from "./components/Firebase.js"
+import Login from './components/Login/Login';
+import {Firebase} from "./components/Firebase.js";
 
 import{
   Router,
@@ -19,6 +20,7 @@ class App extends React.Component{
     return(
       <Router>
         <Scene key ='root' style={{paddingTop:64}}>
+          <Scene key ='login' component = {Login} title='LOGIN'/>
           <Scene key ='home' component = {Home} title='Home'/>
           <Scene key ='chat' component = {Chat} title='Chat'/>
         </Scene>
